@@ -69,7 +69,7 @@ public class AdvanceCalculator {
 			break;
 
 		/*
-		 * If user enters any other operator or char apart from +, -, * and /, then
+		 * If user enters any other operator or char apart from +, -, *, % and /, then
 		 * display an error message to user
 		 * 
 		 */
