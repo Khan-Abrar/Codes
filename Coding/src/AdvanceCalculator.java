@@ -8,7 +8,6 @@ public class AdvanceCalculator {
 		 * floating point value
 		 */
 		int n;
-		double output;
 		/*Scanning the input from user*/
 		Scanner obj = new Scanner(System.in);
 		System.out.println("Enter how many numbers u want to calcuate:");
@@ -20,49 +19,49 @@ public class AdvanceCalculator {
 			a[i] = obj.nextDouble();
 		}
 		/*asking the user to choose the operation*/
-		System.out.println("Enter an operator (+, -, *, /): ");
+		System.out.println("Enter an operator (+, -, *, /,%): ");
 		char operator = obj.next().charAt(0);
 		obj.close();
-		/*using switch function to operate according to the user choice*/
+		double output=a[0];
+		/*using switch-case statement to operate according to the user choice*/
 		
 		switch (operator) {
 		
 		case '+':
-			output=0;
-			for(int i=0;i<n;i++)
+			
+			for(int i=1;i<n;i++)
             {
                 output+=a[i];  /*output=output+a[i]*/
             }  
 			break;
 			
 		case '*':
-			output=1;
-			for(int i=0;i<n;i++)
+			
+			for(int i=1;i<n;i++)
             {
                 output*=a[i];
             }  
 			break;
 
 		case '-':
-			output=0;
-			a[0]=-a[0];
-			for(int i=0;i<n;i++)
+			
+			for(int i=1;i<n;i++)
             {
                 output-=a[i];
             }  
 			break;
 
 		case '/':
-			output=a[0];
-			for(int i=1;i<n;i++)
+			
+			for(int i=0;i<n-1;i++)
             {
-                output/=a[i];  
+                output=a[i]/a[i+1];  
             }
 			break;
 			
 		case '%':
-			output=a[0];
-			for(int i=1;i<n;i++)
+		
+			for(int i=1;i<n-1;i++)
             {
                 output%=a[i];  
             }
